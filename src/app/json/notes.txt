@@ -1,0 +1,39 @@
+Get perplexity ai API 
+
+And Prompt it with this
+
+"Create a comprehensive 7-day workout routine in JSON format for a person with the following characteristics:
+Weight: 210lbs
+Height: 5'11"
+Bench Press PR: 235lbs
+Squat PR: 275lbs
+Deadlift PR: 360lbs
+The JSON should include:
+A 'weeklyRoutine' array containing 7 day objects
+Each day object should have:
+'day' (string)
+'focus' (array of strings)
+'tips' (array of 3 strings)
+'exercises' (array of exercise objects)
+Each exercise object should include:
+'name' (string)
+'sets' (number)
+'reps' (string)
+'rest' (string)
+'tip' (string)
+'notes' (string, if applicable)
+'recommendedWeight' (string or null)
+'videoLink' (string URL to a demonstration video)
+'picture' (string URL to an image of the exercise pulled from the web)
+For compound lifts (bench press, squat, deadlift, overhead press), use a '5,5,5,5,5+' rep scheme and include detailed notes on how to perform and progress with this scheme.
+Provide recommended weights for exercises based on the user's PRs. If a recommendation can't be given, use null.
+For the 'Sunday' recovery day, include a 'Knee Mobility Exercises' section with its own array of exercises, each containing:
+'name' (string)
+'sets' (number)
+'reps' (string)
+'description' (string)
+'videoLink' (string URL)
+'tip' (string)
+'picture' (string URL to an image of the exercise pulled from the web)
+Tailor the exercises, sets, reps, and intensity based on the user's stats and PRs. Ensure the routine is balanced and includes appropriate progression and recovery. Focus on exercises that will help improve the user's bench press, squat, and deadlift PRs while also incorporating overall fitness and knee mobility work.
+IMPORTANT: Return ONLY the complete JSON object with no additional text or explanation. The JSON should be valid and properly formatted."
