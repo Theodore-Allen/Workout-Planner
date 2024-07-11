@@ -2,17 +2,19 @@ import Link from "next/link";
 
 import { GoHomeFill } from "react-icons/go";
 import { GoGear } from "react-icons/go";
+import { GoCheck } from "react-icons/go";
 import Backbtn from "./backbtn";
 
 
 
 export default function Menu() {
     return <>
-        <div className="p-1 overflow-hidden ">
+        <div className="p-1 overflow-hidden z-10 ">
             <div className="flex border-r-2 h-[99vh] flex-col p-2 w-[4.3rem] overflow-hidden " >
                 <div className="flex flex-col gap-2 flex-[1]">
                 <Btn Icon={GoHomeFill} page='/' />
-                    <Backbtn/>
+                <Btn Icon={GoCheck} page ='/completed'/>
+                <Backbtn/>
                 </div>
                 
                 <div className="flex justify-end gap-2 flex-col flex-[1]">

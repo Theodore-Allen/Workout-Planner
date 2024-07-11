@@ -3,10 +3,13 @@ import routine from "@/app/json/workoutData.json"
 
 export default function workoutPage({params})
 {
+  
     const name = params.workout.replace(/%20/g, ' ')
 
     const workouts = routine.weeklyRoutine.find(e => e.day === day())
-    const exercise = workouts.exercises.filter(e => e.name === name)[0]
+    
+  
+    const exercise = (workouts.exercises[0] ? workouts.exercises:workouts.kneeMobilityExercises).find(e => e.name === name)
     
     return exercise ? <>
      <h1 className="text-4xl font-bold">{exercise.name} | {exercise.sets} Sets, {exercise.reps} Reps</h1>
