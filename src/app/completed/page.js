@@ -1,6 +1,6 @@
 import Image from "next/image";
-import routine from "@/app/json/workoutData.json"
-import Workouts from "@/app/components/workouts"
+import routine from "../json/workoutData.json"
+import Workouts from "../components/workouts"
 
 
 

@@ -1,4 +1,4 @@
-import routine from "@/app/json/workoutData.json"
+import routine from "../../json/workoutData.json"
 
 
 export default function workoutPage({params})

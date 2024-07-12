@@ -9,8 +9,8 @@ import Backbtn from "./backbtn";
 
 export default function Menu() {
     return <>
-        <div className="p-1 overflow-hidden z-10 ">
-            <div className="flex border-r-2 h-[99vh] flex-col p-2 w-[4.3rem] overflow-hidden " >
+        <div className="p-1 overflow-hidden z-30 bg-white"> 
+            <div className="flex border-r-2 h-[99vh] flex-col p-2 w-[63px] overflow-hidden " >
                 <div className="flex flex-col gap-2 flex-[1]">
                 <Btn Icon={GoHomeFill} page='/' />
                 <Btn Icon={GoCheck} page ='/completed'/>
@@ -19,6 +19,8 @@ export default function Menu() {
                 
                 <div className="flex justify-end gap-2 flex-col flex-[1]">
                     
+                    <Btn Icon={GoGear} className='self-end' page='/settings' />
+                    <Btn Icon={GoGear} className='self-end' page='/settings' />
                     <Btn Icon={GoGear} className='self-end' page='/settings' />
                 </div>
 
