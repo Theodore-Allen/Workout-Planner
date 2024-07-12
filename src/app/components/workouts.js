@@ -4,9 +4,15 @@ import ExerciseObj from './exerciseObj'
 import { Joan } from 'next/font/google'
 
 const Workouts = ({_workoutsList, uncomplete}) => {
-
-
-  const ___workoutList = JSON.parse( window.localStorage.getItem(uncomplete? "completed":"uncompleted"))? _workoutsList.filter(({ name }) => !JSON.parse( window.localStorage.getItem(uncomplete? "completed":"uncompleted"))?.some((e) => e.name === name)):_workoutsList
+  let ___workoutList = []
+try{
+  ___workoutList = JSON.parse(  window?.localStorage.getItem(uncomplete? "completed":"uncompleted"))? _workoutsList.filter(({ name }) => !JSON.parse( window.localStorage.getItem(uncomplete? "completed":"uncompleted"))?.some((e) => e.name === name)):_workoutsList
+}
+catch(e)
+{
+  
+  // this just produces window not defined and i dont know how to fix it
+}
 
     const [workoutsList, setWorkoutList] = useState(___workoutList)
 

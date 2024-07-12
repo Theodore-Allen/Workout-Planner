@@ -15,8 +15,10 @@ export default function RootLayout({ children }) {
     
       <body className={inter.className}>  
         <div className="flex overflow-y-hidden">
-        <Menu/>
-        <div className=" grow pt-9 pr-5 pl-3 overflow-y-scroll h-[99vh]">
+          <div className="">
+            <Menu/>
+          </div>
+        <div className=" grow pt-9 pr-5 pl-3 overflow-y-scroll  h-[99vh]">
         {children}
           </div>
         </div></body>
